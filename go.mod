@@ -1,3 +1,4 @@
-module krisha_model
+module 	github.com/Logotipiwe/krisha_model
+
 
 go 1.20
