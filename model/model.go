@@ -35,11 +35,11 @@ type Geometry struct {
 }
 
 type Properties struct {
-	Agents       int    `json:"agents"`
-	CounterValue int    `json:"counterValue"`
-	Geohash      string `json:"geohash"`
-	IconContent  any    `json:"iconContent"`
-	AdvertId     int64  `json:"advertId"`
+	Agents       int     `json:"agents"`
+	CounterValue float64 `json:"counterValue"`
+	Geohash      string  `json:"geohash"`
+	IconContent  any     `json:"iconContent"`
+	AdvertId     int64   `json:"advertId"`
 }
 
 type ApsResult struct {
@@ -94,11 +94,11 @@ func (ap Ap) GetLink() string {
 }
 
 type Photo struct {
-	Src   string `json:"src"`
-	W     int    `json:"w"`
-	H     int    `json:"h"`
-	Title string `json:"title"`
-	Alt   string `json:"alt"`
+	Src   string      `json:"src"`
+	W     interface{} `json:"w"` //can be int or "int"
+	H     interface{} `json:"h"` //can be int or "int"
+	Title string      `json:"title"`
+	Alt   string      `json:"alt"`
 }
 
 type Map struct {
